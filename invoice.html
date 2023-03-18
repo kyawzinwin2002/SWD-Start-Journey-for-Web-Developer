@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/invoice.css">
+</head>
+<body>
+
+  <div class="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex my-3 justify-content-between ">
+            <h1>Invoice App</h1>
+            <button id="" class="btn btn-outline-dark print d-print-none">
+              <i class="bi bi-printer pe-none"></i>
+              Print
+            </button>
+          </div>
+          <div class="border d-print-none p-2 m-3">
+            <form class="" id="addInvoice">
+              <div class="row">
+                <div class="col-6">
+                  <label for="" class="form-label">Select Services
+                    <span id="openClose" class="badge bg-dark">Add Service</span>
+                  </label>
+                  <select required name="" class="form-control" id="selectServices"></select>
+                </div>
+                <div class="col">
+                  <label for="" class="form-label">Quantity</label>
+                  <input id="quantity" type="number" required class="form-control">
+                </div>
+                <div class="col">
+                  <button class="btn btn-dark h-100 ">
+                    <i class="bi bi-plus-circle pe-none"></i>
+                    AddList
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+          <table class="table d-none d-print-block table-bordered">
+            <thead>
+              <tr>
+                <th class="w-50">Services</th>
+                <th class="text-end">Quantity</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Total</th>
+              </tr>
+            </thead>
+            <tbody id="lists"></tbody>
+            <tfoot>
+              <tr>
+                <td class="text-end" colspan="3">Sub Total</td>
+                <td class="text-end">$ <span id="subTotal"></span></td>
+              </tr>
+              <tr>
+                <td class="text-end" colspan="3">Tax</td>
+                <td class="text-end">$ <span id="tax"></span></td>
+              </tr>
+              <tr>
+                <td class="text-end" colspan="3">Total</td>
+                <td class="text-end">$ <span id="total"></span></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="min-vh-100 row w-100 p-5 d-flex justify-content-center align-items-center   mother">
+    <div class="col-8">
+      <div class="w-100  bg-white">
+        <form action="" id="addServiceModal" class="border p-3">
+          <h4>Add Service</h4>
+          <hr>
+          <div class="mb-3">
+            <label for="">Service's Title</label>
+            <input name="serviceTitle" required type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="">Price</label>
+            <input name="servicePrice" required type="number" class="form-control">
+          </div>
+          <div class="mb-3 d-flex justify-content-end">
+            <button id="" class="btn me-2 btn-dark btn-sm">Add</button>
+            <button type="button" id="openClose" class="btn btn-outline-dark btn-sm">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/invoice.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+//custom-bootstrap
+$font-family-sans-serif : 'Montserrat', sans-serif;
+$enable-rounded : false;
+
+$component-active-bg : black;
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//custom-css
+
+
+.del-btn {
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.rowList:hover .del-btn{
+    transform: scale(1);
+}
+
+.mother{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.158);
+    transform: scale(0);
+}
+
+.mother.active{
+    transform: scale(1);
+}

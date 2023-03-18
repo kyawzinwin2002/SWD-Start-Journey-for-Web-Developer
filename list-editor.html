@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/list.css">
+</head>
+<body>
+
+    <div class="" id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="">Invoice App</h1>
+                    <div class="border p-3 my-3">
+                        <form >
+                            <div class="input-group">
+                                <input type="text" required id="inputText" class="form-control">
+                                <button id="addList" class="btn btn-dark">
+                                   <i class="bi bi-plus-circle pe-none"></i> Add List</button>
+    
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="">
+                            <h5>Total : <span class="badge bg-dark" id="total">0</span></h5>
+                        </div>
+                        <div class="">
+                            <h5>Done : <span id="doneTotal" class="badge bg-dark">0</span></h5>
+                        </div>
+                    </div>
+                    <ul id="lists" class="list-group ">
+                        
+                           
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/listed.js"></script>
+</body>
+</html>

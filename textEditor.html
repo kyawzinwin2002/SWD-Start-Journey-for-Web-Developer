@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" class="">
+</head>
+<style>
+    .mother{
+        position: fixed;
+        bottom : 20px;
+        left : 0;
+        right : 0;
+        max-width: 500px;
+    }
+</style>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="" id="output">
+
+                </div>
+                <div class="border border-dark  mother mx-auto p-2">
+                    <div class="d-flex justify-content-between align-items-center ">
+                        <h5>Say Something</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button id="speechToText" class="btn me-2 btn-outline-dark btn-sm">
+                                <i class="bi bi-mic"></i>
+                            </button>
+                            <button id="textToSpeech" class="btn me-2 btn-sm btn-outline-dark"><i class="bi  bi-volume-up"></i></button>
+                            <div class="">
+                                Count : <span class="badge bg-black" id="count">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <textarea name="" id="input"  rows="5" class="form-control my-2"></textarea>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="" class="form-label">
+                                    Font Family :
+                                </label>
+                                <select class="form-control" name="" id="fontFamily"></select>
+                            </div>
+                            <div class="col">
+                                <label for="" class="form-label">Font Color :</label>
+                                <input id="fontColor" type="color" class="form-control ">
+                            </div>
+                            <div class="col">
+                                <label for="" class="form-label">Font Size :</label>
+                                <input min="0" max="100" value="16" type="range" id="fontSize" class="form-range">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/te.js"></script>
+</body>
+</html>
